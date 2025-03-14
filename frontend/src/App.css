@@ -1,0 +1,152 @@
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f0f0f0;
+  color: #333;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* Main Container */
+.container {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 400px;
+  text-align: center;
+}
+
+/* Title */
+h1 {
+  color: #4CAF50;
+  font-size: 24px;
+  margin-bottom: 20px;
+  font-weight: normal;
+}
+
+/* Todo Form */
+.todo-form input,
+.todo-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.todo-form button {
+  width: 100%;
+  padding: 12px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.todo-form button:hover {
+  background-color: #45a049;
+}
+
+/* Todo List */
+.todo-list {
+  margin-top: 20px;
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.todo-item {
+  display: flex;
+  flex-direction: column; /* Stack title and description vertically */
+  justify-content: space-between;
+  align-items: flex-start;
+  background-color: #f9f9f9;
+  padding: 12px;
+  margin-bottom: 10px;
+  border-radius: 6px;
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+.todo-title {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.todo-description {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 12px;
+}
+
+.todo-actions {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+button.edit,
+button.delete,
+button.toggle {
+  padding: 6px 10px;
+  font-size: 14px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button.edit {
+  background-color: #FFA500;
+  color: white;
+}
+
+button.delete {
+  background-color: #f44336;
+  color: white;
+}
+
+button.toggle {
+  background-color: #4CAF50;
+  color: white;
+}
+
+button.edit:hover {
+  background-color: #e67e00;
+}
+
+button.delete:hover {
+  background-color: #d32f2f;
+}
+
+button.toggle.completed {
+  background-color: #9E9E9E; /* Grey color for completed todos */
+}
+
+button.toggle:hover {
+  background-color: #45a049;
+}
+
+.todo-item.completed {
+  background-color: #e0e0e0; /* Lighter background for completed todos */
+  text-decoration: line-through; /* Strikethrough completed todos */
+}
+
+.todo-list p {
+  color: #999;
+  font-style: italic;
+  font-size: 16px;
+}
